@@ -25,4 +25,7 @@ body {
   .btn-transparent{
     @apply w-full flex justify-center
   }
+  .sm-w-full{
+    @apply w-full
+  }
 }

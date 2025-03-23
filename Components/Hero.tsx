@@ -5,11 +5,12 @@ import { MdOutlineStarPurple500 } from "react-icons/md";
 import Button from './Button';
 import RightSideHeroImg from "../public/hero.png";
 import { MdClose } from "react-icons/md";
+import Link from 'next/link';
 
 const Hero = () => {
     return (
         <div className='md:max-w-[1100px] md:mx-auto mx-10'>
-            <div className='md:flex flex-between gap-10 items-center'>
+            <div className='md:flex flex-between gap-10 items-center md:mt-0 mt-5'>
 
                 <aside>
                     <div className='relative z-20'>
@@ -22,19 +23,23 @@ const Hero = () => {
                             <MdOutlineStarPurple500 className='text-yellow-400'/>
                             <MdOutlineStarPurple500 className='text-yellow-400'/>
                             <MdOutlineStarPurple500 className='text-yellow-400'/>
-                            <span className='text-sm font-medium'>198K <span className='underline cursor-pointer'>Good Reviews</span></span>
+                            <span className='text-sm font-medium'>198K <Link href={'https://aminulify.com'} className='underline cursor-pointer'>Good Reviews</Link></span>
                         </div>
                     </div>
 
                     <div className='mt-10 flex md:flex-row flex-col items-center md:gap-0 gap-5 mb-5 md:mb-0'>
-                        <Button type='button' title='Download App' variant='btn-green'  />
-                        <Button type='button' title='How we work?' variant='btn-transparent' icon='/play.svg' />
+                        <Link href={'https://www.linkedin.com/in/aminulify/'} className='sm-w-full'>
+                            <Button type='button' title='Download App' variant='btn-green'  />
+                        </Link>
+                        <Link href={'https://www.facebook.com/aminulify'} className='sm-w-full'>
+                            <Button type='button' title='How we work?' variant='btn-transparent' icon='/play.svg' />
+                        </Link>
                     </div>
                 </aside>
 
                 <aside className='relative'>
                     <div className='pt-[-100px]'>
-                        <Image src={RightSideHeroImg} className='' alt='right side image' />
+                        <Image src={RightSideHeroImg} className='w-[1400px]' alt='right side image' />
 
                         <div className='absolute md:top-16 top-4 md:left-10 bg-black backdrop-blur-2xl text-white md:p-5 p-3 rounded-xl shadow-green-300 shadow-2xl'>
                             <MdClose className='text-white absolute right-5 md:top-4 top-3'/>
