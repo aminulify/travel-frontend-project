@@ -11,7 +11,7 @@ const Navbar = () => {
             <main className="flex justify-between items-center max-w-[1100px] mx-auto">
                 <aside>
                     <Link href={'/'}>
-                        <Image src={logo} className="w-24" alt="logo" />
+                        <Image src={logo} className="w-22" alt="logo" />
                     </Link>
                 </aside>
                 <ul className="lg:flex md:flex gap-3 hidden">
@@ -24,7 +24,7 @@ const Navbar = () => {
                         type="button"
                         title="Login"
                         icon="/user.svg"
-                        
+                        variant="btn-black"
                     />
                 </div>
                 <div className="lg:hidden md:hidden flex cursor-pointer">

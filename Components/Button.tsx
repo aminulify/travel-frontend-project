@@ -5,13 +5,14 @@ type ButtonProps = {
     type: 'button' | 'submit';
     title: string;
     icon?: string;
+    variant: string;
 }
 
-const Button = ({type, title, icon}: ButtonProps) => {
+const Button = ({type, title, icon, variant}: ButtonProps) => {
     return (
-        <button className="px-6 py-2 bg-black text-white rounded-full flex items-center gap-1 cursor-pointer hover:bg-green-600 font-[400] duration-300 transition-all" type={type}>
+        <button className={`${variant}`} type={type}>
             {icon && <Image src={icon} alt={title} width={24} height={24} /> }
-            <label className='whitespace-nowrap'>{title}</label>
+            <label className='cursor-pointer'>{title}</label>
 
         </button>
     );
