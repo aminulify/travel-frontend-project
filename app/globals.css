@@ -29,3 +29,56 @@ body {
     @apply w-full
   }
 }
+
+
+
+.leftAos {
+  animation: fadeIn 0.8s linear forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    transform: translateX(-100) scale(0.8) translateY(-50);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0) scale(1) translateY(0);
+    opacity: 1;
+  }
+}
+
+
+
+
+@keyframes fadeRight {
+  from {
+    transform: translateX(100) scale(0.8) translateY(-50);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0) scale(1) translateY(0);
+    opacity: 1;
+  }
+}
+
+.rightAos {
+  animation: fadeRight 0.8s ease-in-out forwards;
+  animation-timeline: view(70%, auto);
+
+}
+
+/* camp  */
+/* camp  */
+/* camp  */
+.bg-bg-img-1{
+  background-image: url(../public/img-1.png);
+  height: 340px;
+  width: 500px !important;
+  background-position: center;
+  background-size: cover;
+}
+.bg-bg-img-2{
+  background-image: url(../public/img-2.png);
+  height: 340px;
+  width: 500px !important;
+}
