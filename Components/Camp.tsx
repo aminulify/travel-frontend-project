@@ -30,7 +30,7 @@ const CampSite = ({ backgroundImage, title, subtitle, peopleJoined }: CampProps)
                 <span className="flex -space-x-4 overflow-hidden">
                 {PEOPLE_URL.map((url) => (
                     <Image 
-                    className="inline-block h-10 w-10 rounded-full"
+                    className="h-10 w-10 rounded-full"
                     src={url}
                     key={url}
                     alt="person"
@@ -48,7 +48,7 @@ const CampSite = ({ backgroundImage, title, subtitle, peopleJoined }: CampProps)
 const Camp = () => {
     return (
         <section className='relative my-5 md:w-[1100px] md:mx-auto'>
-            <div className='flex h-[340px] w-full items-start justify-start gap-8 lg:h-[400px]'>
+            <div className='flex h-[340px] w-full gap-8 lg:h-[400px]'>
                 <CampSite 
                     backgroundImage="bg-img-1"
                     title="Putuk Truno Camp"
@@ -63,9 +63,9 @@ const Camp = () => {
                  />
             </div>
             <div className="mx-10">
-            <aside className="md:absolute right-[250px] top-[200px] w-full md:w-[500px] p-5 rounded-xl bg-green-500 text-white mt-8">
-                <h2 className="font-semibold text-xl mb-1">Feeling Lost And No Knowing The Way?</h2>
-                <p className="text-slate-50 text-sm">Travel opens the door to new experiences, cultures, and unforgettable memories. Whether exploring ancient landmarks, relaxing on tropical beaches, or hiking through breathtaking mountains, every journey brings excitement and discovery. Meeting new people, tasting local cuisines, and embracing different traditions enrich our perspectives.</p>
+            <aside className="md:absolute right-[250px] top-[230px] w-full md:w-[500px] p-5 rounded-xl bg-green-500 text-white mt-8 shadow-xl shadow-green-200">
+                <h2 className="md:text-xl text-lg mb-1"><span className="font-semibold">Feeling Lost</span> And No Knowing The Way?</h2>
+                <p className="text-slate-50 text-sm">Travel opens the door to new experiences, cultures, and unforgettable memories. Whether exploring ancient landmarks, relaxing on tropical beaches.</p>
             </aside>
             </div>
         </section>
