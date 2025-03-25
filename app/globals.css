@@ -70,14 +70,14 @@ body {
 /* camp  */
 /* camp  */
 /* camp  */
-.bg-bg-img-1{
+.bg-img-1{
   background-image: url(../public/img-1.png);
   height: 340px;
   width: 500px !important;
   background-position: center;
   background-size: cover;
 }
-.bg-bg-img-2{
+.bg-img-2{
   background-image: url(../public/img-2.png);
   height: 340px;
   width: 500px !important;
