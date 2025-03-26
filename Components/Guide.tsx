@@ -4,9 +4,10 @@ import img2 from '../public/boat.png';
 import img3 from '../public/meter.svg';
 
 const Guide = () => {
+    
     return (
         <div className='md:max-w-[1100px] mx-10 md:mx-auto my-5'>
-            <aside className='grid md:grid-cols-2 grid-cols-1 my-5 items-center'>
+            <aside className='leftAos grid md:grid-cols-2 grid-cols-1 my-5 items-center'>
                 <div className='md:w-[300px]'>
                     <Image src={img1} alt='camp vector icon'/>
                     <p className='text-slate-600'>WE ARE HERE FOR YOU</p>
@@ -16,10 +17,10 @@ const Guide = () => {
                     <p className='text-sm text-slate-600 mt-2'>Travel opens the door to new experiences, cultures, and unforgettable memories. Whether exploring ancient landmarks, relaxing on tropical beaches, or hiking through breathtaking mountains etc.</p>
                 </div>
             </aside>
-            <aside className='relative mt-5'>
-                <Image src={img2} alt='header image' className='rounded-2xl'/>
+            <aside className='relative mt-5 rightAos'>
+                <Image src={img2} alt='header image' className='rounded-2xl h-[220px] md:h-full bg-cover bg-center'/>
 
-                <div className='absolute top-0 md:top-10 md:left-10 p-4 bg-[#ffffffd9] backdrop-blur-5xl rounded-2xl flex gap-2'>
+                <div className='absolute top-3 left-3 md:top-10 md:left-10 p-4 bg-[#ffffffd9] backdrop-blur-5xl rounded-2xl flex gap-2'>
                     <div>
                         <Image src={img3} width={20} alt='meter img' />
                     </div>

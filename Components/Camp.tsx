@@ -10,7 +10,7 @@ interface CampProps{
 
 const CampSite = ({ backgroundImage, title, subtitle, peopleJoined }: CampProps) =>{
     return(
-        <div className={`h-full w-full min-w-[400px] md:min-w-[900px] bg-cover bg-no-repeat rounded-2xl ${backgroundImage}`}>
+        <div className={` rightAos h-full w-full min-w-[400px] md:min-w-[900px] bg-cover bg-no-repeat rounded-2xl ${backgroundImage}`}>
             <div className="flex justify-left items-center my-5 mx-5  gap-4">
                 <div className="rounded-full bg-green-500 p-4">
                 <Image
