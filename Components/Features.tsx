@@ -2,10 +2,11 @@ import Image from 'next/image';
 import img1 from '../public/camp.svg';
 import img2 from '../public/phones.png';
 import { FEATURES } from '@/constants';
+import bgImg from '../public/feature-bg.png';
 
 const Features = () => {
     return (
-        <div className='my-10 max-w-[1100px] md:mx-auto mx-10'>
+        <div className='my-10 max-w-[1100px] md:mx-auto mx-10 relative'>
             <header className='flex justify-center'>
                 <div>
                     <Image src={img1} alt='camp image icon' />
@@ -13,8 +14,11 @@ const Features = () => {
                 </div>
             </header>
             <main className='grid md:grid-cols-3 grid-cols-1 items-center'>
-                <div className='rotate-35 flex justify-center col-span-1'>
-                    <Image src={img2} alt='left side image'  className='md:w-[500px] w-[300px]'/>
+                <div className='flex justify-center col-span-1'>
+                    <Image src={img2} alt='left side image'  className='md:w-[500px] w-[300px] z-0 rotate-35'/>
+
+                    {/* bg-image  */}
+                    <Image src={bgImg} alt='left side image'  className='absolute -z-10 md:-mt-24'/>
                 </div>
 
                 <div className='col-span-2'>
