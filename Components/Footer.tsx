@@ -19,8 +19,7 @@ interface contactInfo {
 const Footer = () => {
 
     return (
-        <div className='mt-10'>
-            <hr className='text-slate-300' />
+        <div>
 
             <footer className='max-w-[1100px] py-10 md:mx-auto mx-10 flex justify-between flex-col md:flex-row gap-5 text-slate-800'>
                 <Link href={'/'}>
