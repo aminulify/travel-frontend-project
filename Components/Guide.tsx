@@ -11,7 +11,7 @@ import { useEffect } from 'react';
 const Guide = () => {
 
     useEffect(()=>{
-            AOS.init();
+            AOS.init({});
         },[])
     
     return (
