@@ -1,5 +1,6 @@
+'use client'
 import Image from 'next/image';
-import React from 'react';
+import React, { useEffect } from 'react';
 import campImg from "../public/camp.svg";
 import { MdOutlineStarPurple500 } from "react-icons/md";
 import Button from './Button';
@@ -7,12 +8,20 @@ import RightSideHeroImg from "../public/hero.png";
 import { MdClose } from "react-icons/md";
 import Link from 'next/link';
 
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 const Hero = () => {
+
+    useEffect(()=>{
+        AOS.init();
+    },[])
+
     return (
         <div className='md:max-w-[1100px] md:mx-auto mx-10'>
             <div className='md:flex flex-between gap-10 items-center md:mt-0 mt-5'>
 
-                <aside className='leftAos'>
+                <aside className='' data-aos="fade-up-right">
                     <div className='relative z-20'>
                         <Image src={campImg} alt='camp vector image' width={50} className='absolute left-[-5px] top-[0px] w-10 lg:w-[50px]' />
                         <h1 className='pt-12 text-4xl font-bold text-green-900'>Putuk Truno Camp Area</h1>
@@ -37,7 +46,7 @@ const Hero = () => {
                     </div>
                 </aside>
 
-                <aside className='relative rightAos'>
+                <aside className='relative' data-aos="fade-up-left">
                     <div className='pt-[-100px]'>
                         <Image src={RightSideHeroImg} className='w-[1400px] fadeRight' alt='right side image' />
 

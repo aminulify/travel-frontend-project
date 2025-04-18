@@ -1,5 +1,10 @@
+'use client'
 import { PEOPLE_URL } from "@/constants";
 import Image from "next/image";
+
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
 
 interface CampProps{
     backgroundImage: string,
@@ -9,8 +14,13 @@ interface CampProps{
 }
 
 const CampSite = ({ backgroundImage, title, subtitle, peopleJoined }: CampProps) =>{
+
+    useEffect(()=>{
+                AOS.init();
+            },[])
+
     return(
-        <div className={` rightAos h-full w-full min-w-[400px] md:min-w-[900px] bg-cover bg-no-repeat rounded-2xl ${backgroundImage}`}>
+        <div className={` h-full w-full min-w-[400px] md:min-w-[900px] bg-cover bg-no-repeat rounded-2xl ${backgroundImage}`} data-aos="fade-left">
             <div className="flex justify-left items-center my-5 mx-5  gap-4">
                 <div className="rounded-full bg-green-500 p-4">
                 <Image
@@ -48,7 +58,7 @@ const CampSite = ({ backgroundImage, title, subtitle, peopleJoined }: CampProps)
 const Camp = () => {
     return (
         <section className='relative my-5 md:w-[1100px] md:mx-auto'>
-            <div className='flex h-[340px] w-full gap-8 lg:h-[400px]'>
+            <div className='flex h-[340px] w-full gap-8 lg:h-[400px]' data-aos="fade-left">
                 <CampSite 
                     backgroundImage="bg-img-1"
                     title="Putuk Truno Camp"
@@ -63,7 +73,7 @@ const Camp = () => {
                  />
             </div>
             <div className="mx-10">
-            <aside className="md:absolute right-[250px] top-[230px] w-full md:w-[500px] p-5 rounded-xl bg-green-500 text-white mt-8 shadow-xl shadow-green-200">
+            <aside data-aos="fade-up" className="md:absolute right-[250px] top-[230px] w-full md:w-[500px] p-5 rounded-xl bg-green-500 text-white mt-8 shadow-xl shadow-green-200">
                 <h2 className="md:text-xl text-lg mb-1"><span className="font-semibold">Feeling Lost</span> And No Knowing The Way?</h2>
                 <p className="text-slate-50 text-sm">Travel opens the door to new experiences, cultures, and unforgettable memories. Whether exploring ancient landmarks, relaxing on tropical beaches.</p>
             </aside>

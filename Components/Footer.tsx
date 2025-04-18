@@ -1,8 +1,13 @@
+'use client'
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 import logo from "../public/hilink-logo.svg";
 import { FOOTER_CONTACT_INFO, FOOTER_LINKS, SOCIALS } from '@/constants';
+
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
 
 type FooterLink = string;
 
@@ -18,8 +23,12 @@ interface contactInfo {
 
 const Footer = () => {
 
+    useEffect(()=>{
+            AOS.init();
+        },[])
+
     return (
-        <div>
+        <div data-aos='fade-up'>
 
             <footer className='max-w-[1100px] py-10 md:mx-auto mx-10 flex justify-between flex-col md:flex-row gap-5 text-slate-800'>
                 <Link href={'/'}>
